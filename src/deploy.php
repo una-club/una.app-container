@@ -47,20 +47,7 @@ $servers = [
         'repository'       => 'https://github.com/una-club/una.app.git',
         'branch'           => 'master',
         'composer_options' => 'install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction',
-    ],
-    'docker-test'    => [
-        'stage'            => 'docker-test',
-        'host'             => 'localhost',
-        'user'             => 'root',
-        'path'             => '/var/www/preprod',
-        'http_user'        => 'root',
-        'http_group'       => 'root',
-        'private_identity' => '~/.ssh/id_rsa',
-        'public_identity'  => '~/.ssh/id_rsa.pub',
-        'repository'       => 'https://github.com/una-club/una.app.git',
-        'branch'           => 'develop',
-        'composer_options' => 'install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction',
-    ],
+    ]
 ];
 
 ///////////////////////////////////////////////////////////////////////////////
