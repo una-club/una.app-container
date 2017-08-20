@@ -2,7 +2,7 @@ version: "2"
 services:
   nginx:
     ports:
-      - "83:80"
+      - "80:80"
     build: .
     volumes:
       - /home/mishgunn/una/prod/shared:/var/www/prod/univ-nantes-aviron/shared
