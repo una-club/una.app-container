@@ -3,10 +3,10 @@ services:
   nginx:
     ports:
       - "83:80"
-    build: ../una-app-container
+    build: .
     volumes:
-      #- /home/mishgunn/una/prod/shared:/var/www/prod/univ-nantes-aviron/shared
-      - /tmp:/var/www/prod/univ-nantes-aviron/shared
+      - /home/mishgunn/una/prod/shared:/var/www/prod/univ-nantes-aviron/shared
+
 
   mysql:
     ports:
