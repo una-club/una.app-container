@@ -111,7 +111,7 @@ after('project:install', 'cron:install');
 
 // restart nginx and php
 task('server:restart', function () {
-    run('sudo service nginx reload');
-    run('sudo service php7.0-fpm restart');
+    //run('service nginx reload');
+    //run('service php7.0-fpm restart');
 })->desc('Restart Nginx and PHP7.0 service');
 after('success', 'server:restart');
