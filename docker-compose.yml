@@ -1,0 +1,17 @@
+version: "2"
+services:
+  nginx:
+    ports:
+      - "83:80"
+    build: ../una-app-container
+    volumes:
+      #- /home/mishgunn/una/prod/shared:/var/www/prod/univ-nantes-aviron/shared
+      - /tmp:/var/www/prod/univ-nantes-aviron/shared
+
+  mysql:
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=Unanantes1.0
+    image:
+      mysql:8.0.2
