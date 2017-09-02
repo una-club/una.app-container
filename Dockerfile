@@ -3,7 +3,7 @@ FROM nginx
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y curl php git cron acl php7.0-fpm unzip zip
+RUN apt-get install -y sudo curl php git cron acl php7.0-fpm unzip zip
 RUN apt-get install -y php-common php7.0-mbstring php-xml php7.0-mysql
 RUN curl -LO https://deployer.org/deployer.phar
 RUN mv deployer.phar /usr/local/bin/dep
