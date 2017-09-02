@@ -34,4 +34,4 @@ RUN chmod a+x /var/www/prod/univ-nantes-aviron/current/.utils/*
 RUN /var/www/prod/univ-nantes-aviron/current/.utils/packages_install.sh
 RUN /var/www/prod/univ-nantes-aviron/current/.utils/project_install.sh
 
-CMD /etc/init.d/php7.0-fpm start && nginx -g 'daemon off;' "$@"
+CMD /etc/init.d/php7.0-fpm start && cd /var/www/prod/univ-nantes-aviron/current/ && php artisan config:cache && php artisan route:cache && nginx -g 'daemon off;' "$@"
