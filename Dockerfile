@@ -29,4 +29,9 @@ COPY src/deploy.php /root/una-workspace/
 
 RUN cd /root/una-workspace; dep deploy docker-prod
 
+RUN chmod a+x /var/www/prod/univ-nantes-aviron/current/.utils/*
+
+RUN /var/www/prod/univ-nantes-aviron/current/.utils/packages_install.sh
+RUN /var/www/prod/univ-nantes-aviron/current/.utils/project_install.sh
+
 CMD /etc/init.d/php7.0-fpm start && nginx -g 'daemon off;' "$@"
