@@ -19,6 +19,9 @@ RUN adduser www-data sudo
 COPY src/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY src/nginx/sites-enabled /etc/nginx/sites-enabled
 
+RUN rm /etc/php/7.0/fpm/php.ini
+COPY src/php/php.ini /etc/php/7.0/fpm/
+
 RUN export COMPOSER_PROCESS_TIMEOUT=1200
 RUN mkdir /root/una-workspace
 
