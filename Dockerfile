@@ -14,6 +14,8 @@ RUN mkdir -p /var/www/prod/univ-nantes-aviron/shared/storage
 
 RUN rm -f /etc/nginx/conf.d/default.conf
 
+RUN adduser www-data sudo
+
 COPY src/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY src/nginx/sites-enabled /etc/nginx/sites-enabled
 
