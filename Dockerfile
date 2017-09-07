@@ -14,9 +14,6 @@ RUN mkdir -p /var/www/prod/univ-nantes-aviron/shared/storage
 
 RUN rm -f /etc/nginx/conf.d/default.conf
 
-RUN rm -f /var/log/nginx/access.log
-RUN rm -f /var/log/nginx/error.log
-
 RUN adduser www-data sudo
 
 COPY src/nginx/nginx.conf /etc/nginx/nginx.conf
@@ -31,6 +28,9 @@ RUN mkdir /root/una-workspace
 COPY src/deploy.php /root/una-workspace/
 
 RUN cd /root/una-workspace; dep deploy docker-prod
+
+RUN rm -f /var/log/nginx/access.log
+RUN rm -f /var/log/nginx/error.log
 
 RUN chmod a+x /var/www/prod/univ-nantes-aviron/current/.utils/*
 
