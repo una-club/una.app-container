@@ -9,7 +9,7 @@ server {
     	# listen [::]:80 default_server ipv6only=on;
 
     	root /var/www/prod/regataiades;
-    	index.en.html index.htm;
+    	index index.en.html index.html;
 
     	#server_name _;
 	server_name regataiades.en;
