@@ -12,7 +12,7 @@ server {
     	index index.en.html index.html;
 
     	#server_name _;
-	server_name regataiades.en;
+	server_name regataiades.com;
 
     	location / {
         	try_files $uri $uri/ /index.php?$query_string;
