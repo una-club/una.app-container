@@ -17,3 +17,7 @@ services:
       - /home/mishgunn/una/db:/var/lib/mysql
     image:
       mysql:8.0.2
+
+build:
+  context: .
+  network: worknet
