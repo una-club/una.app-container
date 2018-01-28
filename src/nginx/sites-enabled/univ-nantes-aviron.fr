@@ -1,18 +1,18 @@
 server {
-  listen 80;
+  listen 8080;
   server_name 51.254.205.240;
   return 301 $scheme://univ-nantes-aviron.fr$request_uri;
 }
 
 server {
-  listen 80;
+  listen 8080;
   server_name www.univ-nantes-aviron.fr;
   return 301 $scheme://univ-nantes-aviron.fr$request_uri;
 }
 
 server {
-  listen 80 default_server;
-  listen [::]:80 default_server ipv6only=on;
+  listen 8080 default_server;
+  listen [::]:8080 default_server ipv6only=on;
 
   root /var/www/prod/univ-nantes-aviron/current/public;
   index index.php index.html index.htm;
