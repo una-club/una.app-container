@@ -4,6 +4,8 @@ services:
     ports:
       - "8080:8080"
     build: .
+    networks:
+      - worknet
     volumes:
       - /home/mishgunn/una/prod/shared:/var/www/prod/univ-nantes-aviron/shared
 
@@ -11,6 +13,8 @@ services:
   mysql:
     ports:
       - "3306:3306"
+    networks:
+      - worknet
     environment:
       - MYSQL_ROOT_PASSWORD=Unanantes1.0
     volumes:
@@ -18,6 +22,6 @@ services:
     image:
       mysql:8.0.2
 
-build:
-  context: .
-  network: worknet
+networks:
+  worknet:
+    external: true
