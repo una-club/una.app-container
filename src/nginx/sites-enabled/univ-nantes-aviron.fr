@@ -20,6 +20,15 @@ server {
   #server_name _;
   server_name univ-nantes-aviron.fr localhost;
 
+  location /inscription {
+    try_files /page/$uri /page/$uri/ /index.php?$query_string;
+  }
+
+  location /horaires {
+    try_files /page/$uri /page/$uri/ /index.php?$query_string;
+  }
+
+
   location / {
     try_files $uri $uri/ /index.php?$query_string;
   }
