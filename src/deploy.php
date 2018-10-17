@@ -55,6 +55,7 @@ $servers = [
 ///////////////////////////////////////////////////////////////////////////////
 
 // set configurations
+set('default_timeout', 2000);
 set('shared_files', ['.env']);
 set('shared_dirs', [
     'storage/app',
